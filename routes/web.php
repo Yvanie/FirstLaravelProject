@@ -19,3 +19,9 @@ Route::get('/home', [ParentController::class,'home']);
 Route::get('/pricing', [ParentController::class,'service']);
 Route::get('/service', [ParentController::class,'pricing']);
 Route::get('/contact', [ParentController::class,'contact']);
+Route::get('/users', [ParentController::class,'list']);
+/* Route::get('/users', function(){
+    $display =DB::table('user')->get();
+    dd($display);
+    return view('/pages/users');
+}); */

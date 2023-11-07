@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\Users;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class ParentController extends Controller
 {
@@ -21,4 +22,9 @@ class ParentController extends Controller
     public function contact(){
         return view('pages/contact');
     }
+    public function list(){
+        $datas = user::all();
+        return view('pages/users', compact('datas'));
+    }
 }
+
