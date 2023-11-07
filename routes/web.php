@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ParentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\ParentController@index');
-//Route::get('/', [ParentController::class, 'index']);
-Route::get('/home', 'App\Http\Controllers\ParentController@home');
-Route::get('/pricing', 'App\Http\Controllers\ParentController@service');
-Route::get('/service', 'App\Http\Controllers\ParentController@pricing');
-        return view('pages/contact');
-Route::get('/contact', 'App\Http\Controllers\ParentController@contact');
-/* Route::get('/contact', function(){
-    return view('pages/contact');
-}); */
+//Route::get('/', 'App\Http\Controllers\ParentController@index');
+Route::get('/', [ParentController::class, 'index']);
+Route::get('/home', [ParentController::class,'home']);
+Route::get('/pricing', [ParentController::class,'service']);
+Route::get('/service', [ParentController::class,'pricing']);
+Route::get('/contact', [ParentController::class,'contact']);
