@@ -14,23 +14,23 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         //User::factory(5)->create();
-        User::factory()->create([
+        User::create([
                 'name' => 'Yvanie Noelle',
                 'email' => 'yva@example.com',
                 'email_verified_at' => '2023-11-09 15:15:29',
-                'password'=>'$2y$12$nkxoEFD/0X53muTHl4TLuO1F2cTnNPHHoeJlgdiLOnHrmahKH32Pm'
+                'password'=>bcrypt('12345')
              ]);
-             User::factory()->create([
+             User::create([
                 'name' => 'Jean Claude',
                 'email' => 'jean@example.com',
                 'email_verified_at' => '2023-11-09 15:15:29',
-                'password'=>'$2y$12$nkxoEFD/0X53muTHl4TLuO1F2cTnNPHHoeJlgdiLOnHrmahKH32Pm'
+                'password'=>bcrypt('6789')
              ]);
-             User::factory()->create([
+             User::create([
                 'name' => 'Vad',
                 'email' => 'vad@example.com',
                 'email_verified_at' => '2023-11-09 15:15:29',
-                'password'=>'$2y$12$nkxoEFD/0X53muTHl4TLuO1F2cTnNPHHoeJlgdiLOnHrmahKH32Pm'
+                'password'=>bcrypt('74532')
              ]);
 
 
